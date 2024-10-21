@@ -6,9 +6,6 @@ package kadai_018;
 	public String givenName;
 	public String address =  "東京都中野区○×";
 	
-	public void setGivenName(String givenName) {
-		this.givenName = givenName;
-	}
 	
 	public void commonIntoroduce() {
 		

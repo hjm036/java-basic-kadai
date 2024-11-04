@@ -21,49 +21,51 @@ public class Jyanken_Chapter26 {
 	}
 	
 	public String getRandom() {
-        String[] opponentChoices = {"r", "s", "p"};
+        String[] yourChoices = {"r", "s", "p"};
         int i = (int)(Math.random() * 3);
-        return opponentChoices[i];
+        
+        return yourChoices[i];
     }
 
-public void playGame() {
+	public void playGame() {
 
-HashMap<String, String> hand = new HashMap<String, String>();
+		HashMap<String, String> hand = new HashMap<String, String>();
 
 
-hand.put("r", "グー");
-hand.put("s", "チョキ");
-hand.put("p", "パー");
+		hand.put("r", "グー");
+		hand.put("s", "チョキ");
+		hand.put("p", "パー");
 
-String myHand = getMyChoice();
+		String myHand = getMyChoice();
 
-String yourChoice = getRandom();
+		String yourChoice = getRandom();
 
-System.out.println("自分の手は" + hand.get(myHand) + "対戦相手の手は" + hand.get(yourChoice));
+		System.out.println("自分の手は" + hand.get(myHand) + "対戦相手の手は" + hand.get(yourChoice));
 
-if (myHand.equals(yourChoice)) {
-	System.out.println("あいこです");
-} else if (myHand.equals("r")) {
-	if (yourChoice.equals("s")) {
-		System.out.println("自分の勝ちです");
-	} else {
-		System.out.println("自分の負けです");
-	}
-} else if (myHand.equals("s")) {
-	if (yourChoice.equals("p")) {
-		System.out.println("自分の勝ちです");
-	} else {
-		System.out.println("自分の負けです");
-	}
-} else if (myHand.equals("p")) {
-	if (yourChoice.equals("r")) {
-		System.out.println("自分の勝ちです");
-	} else {
-		System.out.println("自分の負けです");
-	}
-} else {
-	System.out.println("無効な入力です");
-		}
+		if (myHand.equals(yourChoice)) {
+			System.out.println("あいこです");
+		} else if (myHand.equals("r")) {
+			if (yourChoice.equals("s")) {
+				System.out.println("自分の勝ちです");
+			} else {
+				System.out.println("自分の負けです");
+			}
+		} else if (myHand.equals("s")) {
+			if (yourChoice.equals("p")) {
+				System.out.println("自分の勝ちです");
+			} else {
+				System.out.println("自分の負けです");
+			}
+		} else if (myHand.equals("p")) {
+			if (yourChoice.equals("r")) {
+				System.out.println("自分の勝ちです");
+			} else {
+				System.out.println("自分の負けです");
+			}
+		} else {
+			System.out.println("無効な入力です");
+			
+			}
 	}
 
 }

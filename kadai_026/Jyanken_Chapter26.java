@@ -22,9 +22,18 @@ public class Jyanken_Chapter26 {
 	
 	public String getRandom() {
         String[] yourChoices = {"r", "s", "p"};
-        int i = (int)(Math.random() * 3);
-        
-        return yourChoices[i];
+        int i = (int) Math.floor(Math.random() * 3);
+
+		switch (i) {
+		case 0:
+			return yourChoices[0];
+		case 1:
+			return yourChoices[1];
+		case 2:
+			return yourChoices[2];
+		default:
+			return "";
+		}
     }
 
 	public void playGame() {
